@@ -30,7 +30,7 @@
   /* Fluid skalering styrt av HOEYDE: header + 10 rader per kolonne er ~48rem
      vertikalt, og 2vh gir dermed ~95 % fyllgrad uansett opploesning.
      vw-leddet er kun en sikring paa smale/staaende skjermer. */
-  html { font-size: clamp(16px, min(1.65vh, 1.45vw), 38px); }
+  html { font-size: clamp(16px, min(1.5vh, 1.45vw), 38px); }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -218,7 +218,6 @@
 
   /* --- to-kolonne ledertavle --- */
   .board {
-    --bs: 1.2;          /* skala-knapp for tavla: 1 = nøytral, høyere = større rader/tekst */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
@@ -235,9 +234,9 @@
     display: grid;
     grid-template-columns: 3.2rem 1fr auto;
     gap: 0.7rem;
-    padding: calc(0.8rem * var(--bs)) 1.4rem;
+    padding: 0.8rem 1.4rem;
     font-family: var(--display); font-weight: 600;
-    font-size: calc(0.85rem * var(--bs)); letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 0.85rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--muted);
     border-bottom: 1px solid var(--line);
   }
@@ -249,7 +248,7 @@
     grid-template-columns: 3.2rem 1fr auto;
     align-items: center;
     gap: 0.7rem;
-    padding: calc(0.8rem * var(--bs)) 1.4rem;
+    padding: 0.8rem 1.4rem;
     border-bottom: 1px solid var(--divider);
     cursor: pointer;
     transition: background 0.15s;
@@ -261,16 +260,16 @@
     outline-offset: -2px;
   }
   .lb-rank {
-    font-family: var(--display); font-weight: 800; font-size: calc(1.7rem * var(--bs));
+    font-family: var(--display); font-weight: 800; font-size: 1.7rem;
     color: var(--muted); text-align: center;
   }
   .lb-navn {
-    font-weight: 600; font-size: calc(1.3rem * var(--bs));
+    font-weight: 600; font-size: 1.3rem;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   .lb-points {
     display: flex; justify-content: flex-end; align-items: baseline; gap: 0.55rem;
-    font-family: var(--digits); font-weight: 700; font-size: calc(1.65rem * var(--bs));
+    font-family: var(--digits); font-weight: 700; font-size: 1.65rem;
     color: var(--chalk);
     text-shadow: 0 0 18px rgba(253, 244, 245, 0.2);
   }
@@ -461,10 +460,10 @@
           <span class="status"><span class="dot"></span>Avsluttet</span>
         </div>
         <h1>Ledertavle</h1>
-        <p class="sub">Sist oppdatert <b>25. juni 16:31</b> · 32 av 32 sluttspillkamper spilt · trykk på en rad for å se utregning · ~ = tentativt</p>
+        <p class="sub">Sist oppdatert <b>25. juni 16:34</b> · 32 av 32 sluttspillkamper spilt · trykk på en rad for å se utregning · ~ = tentativt</p>
         <div class="progress" aria-hidden="true"><span style="width:100%"></span></div>
       </div>
-      <div class="norge-card"><div class="norge-label"><span class="flagg" aria-hidden="true"></span>Neste Norge-kamp</div><div class="norge-matchup">Norge – Brasil</div><div class="norge-meta">27. juni · kl. 13:01 · Kvartfinale</div><div class="norge-klokke" id="norge-klokke" data-kickoff="2026-06-27T11:01:10Z"></div></div>
+      <div class="norge-card"><div class="norge-label"><span class="flagg" aria-hidden="true"></span>Neste Norge-kamp</div><div class="norge-matchup">Norge – Brasil</div><div class="norge-meta">27. juni · kl. 13:04 · Kvartfinale</div><div class="norge-klokke" id="norge-klokke" data-kickoff="2026-06-27T11:04:48Z"></div></div>
     </div>
     <div class="nightly"><span class="nightly-label">Finale</span><span class="chip norge">Tyskland <span class="res">3–1</span> Norge</span></div>
     <div class="nightly kommende"><span class="nightly-label">I kveld</span><span class="chip live"><span class="tid">18:00</span> Algerie – Argentina</span><span class="chip norge"><span class="tid">21:00</span> Norge – Belgia</span><span class="chip"><span class="tid">23:30</span> Bosnia-Hercegovina – Brasil</span></div>
